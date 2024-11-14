@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothing Here</title>
+    <style>
+        body {
+            font-family: monospace, sans-serif;
+            line-height: 1;
+		 background-color: black;
+            color: #00FF00;
+            margin: 0;
+        }
+        
+        h1, h2 {
+            font-weight: normal;
+        }
+        
+        header {
+            background-color: black;
+            color: #00FF00;
+            padding: 1rem;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><center>Hardst Riddle by Aqeel</center></h1>
+    </header>
+    <main>
+        <h1><center>What Is 1+1= ? </center></h1>
+        <center><input type="text" id="answer" placeholder="Enter your answer...">
+        <button onclick="checkAnswer()">Submit</button></center>
+    </main>
+        <center><div id="congrats" class="hidden">
+        <h1>Congratulations!</h1>
+        <h2>You solved the hardest riddle!</h2>
+        <h2>Here is a secret message for you</h2>
+        <div id="rickRollVideoContainer" class="hidden">
+            <button onclick="playRickRollVideo()">Play the Video</button>
+        </div></center>
+    </div>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "2") {
+                document.getElementById("congrats").classList.remove("hidden");
+                document.getElementById("congrats").classList.add("visible");
+                document.getElementById("rickRollVideoContainer").classList.remove("hidden");
+                document.getElementById("rickRollVideoContainer").classList.add("visible");
+            }
+        }
+	
+        function playRickRollVideo() {
+            window.open("https://youtu.be/6ZfUbfN7qnY", "_blank");
+        }
+    </script>
+</body>
+</html>
